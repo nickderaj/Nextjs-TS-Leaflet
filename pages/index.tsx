@@ -7,10 +7,14 @@ export default function Home(_: PageWithLayout) {
   return (
     <div className="flex gap-2 h-screen w-screen justify-center items-center">
       <Link href="/loki">
-        <Button title="Loki" />
+        <a>
+          <Button title="Loki" />
+        </a>
       </Link>
       <Link href="/jax">
-        <Button title="Jax" />
+        <a>
+          <Button title="Jax" />
+        </a>
       </Link>
     </div>
   );

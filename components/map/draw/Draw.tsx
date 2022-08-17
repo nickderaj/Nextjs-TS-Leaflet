@@ -13,6 +13,7 @@ export default function Draw() {
   const { drawMode } = useSelector((state: RootState) => state.draw);
 
   useEffect(() => {
+    // Hotkeys for different shapes
     if (window) {
       window.addEventListener('keydown', (e: KeyboardEvent) => {
         if (e.key === '1') dispatch(setDrawMode('rectangle'));
@@ -23,6 +24,13 @@ export default function Draw() {
       });
     }
   });
+
+  useEffect(() => {
+    // Crosshair controls
+    const el = Array.from(document.getElementsByClassName('leaflet-grab') as HTMLCollectionOf<HTMLElement>);
+    if (drawMode) el[0].style.cursor = 'crosshair';
+    if (!drawMode) el[0].style.cursor = 'grab';
+  }, [drawMode]);
 
   return (
     <>

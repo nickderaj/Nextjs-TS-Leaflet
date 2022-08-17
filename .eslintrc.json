@@ -14,6 +14,7 @@
   ],
   "rules": {
     "no-unused-vars": [1, { "args": "after-used", "argsIgnorePattern": "^_" }],
-    "import/no-anonymous-default-export": 0
+    "import/no-anonymous-default-export": 0,
+    "no-undef": 0
   }
 }

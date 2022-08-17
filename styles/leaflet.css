@@ -231,7 +231,7 @@ svg.leaflet-zoom-animated {
 /* cursors */
 
 .leaflet-interactive {
-  cursor: pointer;
+  cursor: crosshair;
 }
 .leaflet-grab {
   cursor: -webkit-grab;

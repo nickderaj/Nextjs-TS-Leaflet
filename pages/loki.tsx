@@ -45,10 +45,14 @@ export default function Loki(_: PageWithLayout) {
           />
           <div className="flex gap-2 justify-center mt-24">
             <Link href="/loki">
-              <Button title="Loki" />
+              <a>
+                <Button title="Loki" />
+              </a>
             </Link>
             <Link href="/jax">
-              <Button title="Jax" />
+              <a>
+                <Button title="Jax" />
+              </a>
             </Link>
           </div>
         </div>
