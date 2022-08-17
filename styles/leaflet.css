@@ -14,10 +14,6 @@
   left: 0;
   top: 0;
 }
-.leaflet-container {
-  height: 100%;
-  overflow: hidden;
-}
 .leaflet-container:focus {
   outline: none;
 }
@@ -277,6 +273,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .leaflet-container {
   background: #ddd;
   outline-offset: 1px;
+  height: 100%;
+  overflow: hidden;
 }
 .leaflet-container a {
   color: #0078a8;

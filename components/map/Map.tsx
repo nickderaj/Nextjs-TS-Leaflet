@@ -10,7 +10,7 @@ export default function Map({ imageSrc }: { imageSrc: string }) {
   return (
     <MapContainer
       center={[0, 0]}
-      zoom={0}
+      zoom={5}
       doubleClickZoom={false}
       scrollWheelZoom={true}
       maxBoundsViscosity={1}

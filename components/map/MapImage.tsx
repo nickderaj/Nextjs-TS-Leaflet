@@ -10,12 +10,13 @@ export default function MapImage({ imageSrc }: { imageSrc: string }) {
     const img = new Image();
     img.onload = () => {
       if (img.height > 0 && img.width > 0) {
-        const southWest = map.unproject([0, img.height], 10);
-        const northEast = map.unproject([img.width, 0], 10);
+        const southWest = map.unproject([0, img.height], 5);
+        const northEast = map.unproject([img.width, 0], 5);
         const bounds = new L.LatLngBounds(southWest, northEast);
 
         const image = L.imageOverlay(imageSrc, bounds).addTo(map);
         map.fitBounds(image.getBounds());
+        map.setMaxBounds(image.getBounds());
       }
     };
     img.src = imageSrc;
