@@ -17,7 +17,7 @@ export default function Button({ title, onClick, variant = 'primary', type = 'bu
       type={type}
       onClick={onClick}
       className={`${variant === 'primary' ? primaryClasses : secondaryClasses}
-      border hover:shadow-md px-4 py-1 text-center text-sm rounded-full duration-300 transition-all`}
+      border hover:shadow-md px-4 py-1 text-center text-sm rounded-full duration-300 transition-all min-w-[100px]`}
     >
       {title}
     </button>
