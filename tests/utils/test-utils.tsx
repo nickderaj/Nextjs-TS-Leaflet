@@ -7,7 +7,7 @@ import React, { PropsWithChildren } from 'react';
 import { Provider } from 'react-redux';
 
 // As a basic setup, import your same slice reducers
-import modalReducer from '@/redux/slices/modalSlice';
+import drawReducer from '@/redux/slices/drawSlice';
 
 interface ExtendedRenderOptions extends Omit<RenderOptions, 'queries'> {
   preloadedState?: PreloadedState<RootState>;
@@ -18,7 +18,7 @@ function renderWithProviders(
   ui: React.ReactElement,
   {
     preloadedState = {},
-    store = configureStore({ reducer: { modal: modalReducer }, preloadedState }),
+    store = configureStore({ reducer: { draw: drawReducer }, preloadedState }),
     ...renderOptions
   }: ExtendedRenderOptions = {}
 ) {
