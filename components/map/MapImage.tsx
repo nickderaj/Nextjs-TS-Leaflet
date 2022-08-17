@@ -2,9 +2,8 @@ import L from 'leaflet';
 import { useEffect } from 'react';
 import { useMap } from 'react-leaflet';
 
-export default function MapImage() {
+export default function MapImage({ imageSrc }: { imageSrc: string }) {
   const map = useMap();
-  const imageSrc = 'loki.jpg';
 
   useEffect(() => {
     // insert the image onto the map
@@ -20,7 +19,7 @@ export default function MapImage() {
       }
     };
     img.src = imageSrc;
-  }, [map]);
+  }, [map, imageSrc]);
 
   return null;
 }

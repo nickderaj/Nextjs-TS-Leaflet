@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import Draw from './draw/Draw';
 import MapImage from './MapImage';
 
-export default function Map() {
+export default function Map({ imageSrc }: { imageSrc: string }) {
   const { isDrawing } = useSelector((state: RootState) => state.draw);
 
   return (
@@ -17,7 +17,7 @@ export default function Map() {
       dragging={!isDrawing}
       zoomControl={false}
     >
-      <MapImage />
+      <MapImage imageSrc={imageSrc} />
       <Draw />
     </MapContainer>
   );
