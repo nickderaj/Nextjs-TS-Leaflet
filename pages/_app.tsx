@@ -1,5 +1,6 @@
 import { store } from '@/redux/store';
 import '@/styles/globals.css';
+import '@/styles/leaflet.css';
 import { PageWithLayout } from '@/types/page';
 import type { AppProps } from 'next/app';
 import { Provider } from 'react-redux';
